@@ -1,0 +1,368 @@
+:root {
+  --indigo: #6610f2;
+  --indigo-dark: #5208d4;
+  --gray-light: #f9f9f9;
+}
+
+.text-indigo {
+  color: var(--indigo) !important;
+}
+
+.btn-indigo {
+  background-color: var(--indigo);
+  color: white;
+  border: none;
+}
+
+.btn-indigo:hover {
+  background-color: var(--indigo-dark);
+}
+
+/* ===================== CMS Page ===================== */
+
+.cms-container {
+  background: var(--gray-light);
+  min-height: 100vh;
+  padding: 2rem 1rem;
+  position: relative;
+}
+
+.cms-title {
+  text-align: center;
+  font-size: 2rem;
+  font-weight: bold;
+  color: var(--indigo);
+  margin-bottom: 2rem;
+}
+
+.table-wrapper {
+  overflow-x: auto;
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.05);
+}
+
+.cms-table {
+  width: 100%;
+  min-width: 600px;
+  border-collapse: collapse;
+}
+
+.cms-table th {
+  background-color: var(--indigo);
+  color: white;
+  text-align: left;
+  padding: 1rem;
+  font-size: 15px;
+}
+
+.cms-table td {
+  padding: 1rem;
+  vertical-align: top;
+  font-size: 14px;
+  color: #333;
+  border-bottom: 1px solid #eee;
+}
+
+.cms-table tr:hover {
+  background-color: #f3f4f6;
+}
+.popup-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 100;
+}
+
+.popup-form {
+  background: white;
+  padding: 20px;
+  border-radius: 8px;
+  width: 300px;
+}
+
+.input-group {
+  margin-bottom: 15px;
+}
+
+.input-group label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+.input-group input {
+  width: 100%;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.button-group {
+  display: flex;
+  justify-content: space-between;
+}
+
+.submit-btn, .cancel-btn {
+  padding: 8px 16px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.submit-btn {
+  background-color: #4f46e5; /* Indigo color */
+  color: white;
+}
+
+.cancel-btn {
+  background-color: #dc3545;
+  color: white;
+}
+
+.success-popup {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: white;
+  padding: 20px;
+  border-radius: 8px;
+  z-index: 200;
+}
+
+.success-popup p {
+  margin-bottom: 10px;
+}
+
+.success-popup button {
+  background-color: #4f46e5; /* Indigo color */
+  color: white;
+  padding: 8px 16px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.action-col {
+  position: relative;
+  width: 60px;
+}
+
+.action-btn {
+  background: none;
+  border: none;
+  color: var(--indigo);
+  font-size: 20px;
+  cursor: pointer;
+  padding: 4px 10px;
+  border-radius: 6px;
+  transition: background 0.2s ease;
+}
+
+.action-btn:hover {
+  background: rgba(102, 16, 242, 0.1);
+}
+
+/* ===================== Dropdown Menu ===================== */
+
+.dropdown-menu {
+  position: absolute;
+  right: 0;
+  top: 30px; /* Position below the button */
+  background: white;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  z-index: 10;
+  min-width: 120px;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+  display: none; /* Default to hidden */
+}
+
+/* Show dropdown when it's active */
+.dropdown-menu.show {
+  display: block;
+}
+
+.dropdown-menu button {
+  display: block;
+  width: 100%;
+  padding: 10px 14px;
+  border: none;
+  background: none;
+  text-align: left;
+  font-size: 14px;
+  color: #333;
+  cursor: pointer;
+}
+
+.dropdown-menu button:hover {
+  background-color: #f1f1f1;
+}
+
+.dropdown-menu .delete {
+  color: #e11d48;
+}
+
+/* Floating Add Button */
+.floating-add-btn {
+  position: fixed;
+  bottom: 24px;
+  right: 24px;
+  background-color: var(--indigo);
+  color: white;
+  padding: 12px 24px;
+  font-size: 16px;
+  border: none;
+  border-radius: 9999px;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+  transition: background 0.3s ease;
+  z-index: 100;
+}
+
+.floating-add-btn:hover {
+  background-color: var(--indigo-dark);
+}
+
+@media (max-width: 768px) {
+  .floating-add-btn {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    padding: 0;
+    font-size: 28px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+}
+
+/* ===================== Chatbot ===================== */
+
+.chatbot-icon {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-color: var(--indigo);
+  color: white;
+  border-radius: 50%;
+  padding: 16px;
+  cursor: pointer;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  font-size: 28px;
+  z-index: 1050;
+}
+
+.chatbot-popup {
+  position: fixed;
+  bottom: 70px;
+  right: 20px;
+  width: 320px;
+  max-width: 90%;
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2);
+  padding: 16px;
+  z-index: 1040;
+  display: none;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 440px;
+}
+
+.chatbot-popup.show {
+  display: flex;
+}
+
+.chatbot-header {
+  font-weight: bold;
+  font-size: 18px;
+  color: var(--indigo);
+}
+
+.chatbot-messages {
+  flex-grow: 1;
+  overflow-y: auto;
+  padding-right: 5px;
+  margin-bottom: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.chatbot-message {
+  background-color: #f1f1f1;
+  padding: 8px 12px;
+  border-radius: 8px;
+  max-width: 85%;
+}
+
+.chatbot-message.bg-indigo {
+  background-color: var(--indigo) !important;
+  color: white;
+}
+
+.chatbot-message.user {
+  align-self: flex-end;
+  background-color: #e0e0e0;
+  color: black;
+  border-bottom-right-radius: 0;
+}
+
+.chatbot-message.bot {
+  align-self: flex-start;
+  background-color: var(--indigo);
+  color: white;
+  border-bottom-left-radius: 0;
+}
+
+.chatbot-input-container {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+}
+
+.chatbot-input {
+  flex-grow: 1;
+  padding: 10px;
+  border-radius: 8px;
+  border: 1px solid #ddd;
+}
+
+.chatbot-send-btn {
+  background-color: var(--indigo);
+  color: white;
+  padding: 10px 14px;
+  border-radius: 50%;
+  border: none;
+  cursor: pointer;
+}
+
+.chatbot-send-btn:hover {
+  background-color: var(--indigo-dark);
+}
+
+@media (max-width: 768px) {
+  .chatbot-popup {
+    bottom: 0;
+    right: 0;
+    width: 100%;
+    height: 100vh;
+    border-radius: 0;
+    padding: 16px;
+  }
+
+  .chatbot-icon {
+    display: block;
+  }
+
+  .chatbot-popup.show ~ .chatbot-icon {
+    display: none;
+  }
+}
